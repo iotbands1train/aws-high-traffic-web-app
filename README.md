@@ -11,6 +11,58 @@ This repository contains Terraform configurations and scripts for deploying a sc
 This repository contains the Terraform configuration files and necessary scripts to deploy a scalable, high-traffic web application on AWS. The architecture leverages various AWS services, including EC2, Elastic Load Balancer (ELB), Auto Scaling Group (ASG), API Gateway, Step Functions, Cognito, Lambda, and DynamoDB, to ensure high availability, scalability, and security. 
 
 ### Detailed Description
+# AWS High-Traffic Web Application
+
+This repository contains Terraform configurations for deploying a high-traffic web application on AWS. The architecture includes EC2 instances, ELB, ASG, API Gateway, Step Functions, Cognito, Lambda, and DynamoDB.
+
+## Directory Structure
+
+```plaintext
+aws-high-traffic-web-app/
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── modules/
+│   ├── vpc/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── ec2/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── elb/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── asg/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── cognito/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── apigateway/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── stepfunctions/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── lambda/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── dynamodb/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+├── scripts/
+│   ├── initial_task.py
+│   ├── manual_verification.py
+├── README.md
 
 **Features:**
 - **EC2 Instances**: Hosts the web application to handle user requests.
